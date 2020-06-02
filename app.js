@@ -93,3 +93,44 @@ class CD extends Media {
     }
 }
 
+//Test Instances
+
+//Book Instance
+
+const historyOfEverything = new Book('Bill Bryson', 'A Short History of Nearly Everything', 544);
+
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(4);
+historyOfEverything.addRating(5);
+
+console.log(historyOfEverything.getAverageRating());
+
+//Movie Instance
+
+const speed = new Movie('Jan de Bont', 'Speed', 116);
+
+speed.toggleCheckOutStatus();
+console.log(speed.isCheckedOut);
+
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+
+console.log(speed.getAverageRating());
+
+//CD instance 
+
+const fastForward = new CD('Above the Mendoza', 'Fast Forward', ['Fast Forward', 'Wes First Punk Show', 'Five More Minutes', 'Koala']);
+
+fastForward.toggleCheckOutStatus();
+console.log(fastForward.isCheckedOut);
+
+fastForward.addRating(3);
+fastForward.addRating(5);
+fastForward.addRating(5);
+fastForward.addRating(1);
+
+console.log(fastForward.getAverageRating());
