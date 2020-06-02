@@ -1,3 +1,5 @@
+//Media Class
+
 class Media {
     constructor(title) {
         this._title = title;
@@ -34,5 +36,23 @@ class Media {
 
     set isCheckedOut(value) {
         this._isCheckedOut = value;
+    }
+}
+
+//Book Class
+
+class Book extends Media {
+    constructor(author, title, pages) {
+        super(title);
+        this._author = author;
+        this._pages = pages;
+    }
+
+    get author() {
+        return this._author;
+    }
+
+    get pages() {
+        return this._pages;
     }
 }
